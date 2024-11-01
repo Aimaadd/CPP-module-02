@@ -2,13 +2,13 @@
 
 const int Fixed::frac_bits = 8;
 
-Fixed::Fixed () : store(0) {
+Fixed::Fixed () : value(0) {
     std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(Fixed& fixed) {
     std::cout << "Copy constructor called" << std::endl;
-    store = fixed.store;
+    value = fixed.value;
 }
 
 Fixed::~Fixed() {
@@ -17,16 +17,16 @@ Fixed::~Fixed() {
 
 int Fixed::getRawBits(void) const {
     std::cout << "getRawBits member function called" << std::endl;
-    return store;
+    return value;
 }
 
 void Fixed::setRawBits(int const raw) {
-    store = raw;
+    value = raw;
     std::cout << "setRawBits member function called" << std::endl;
 }
 
 Fixed& Fixed::operator=(Fixed& fixed) {
     std::cout << "Copy assignment operator called" << std::endl;
-    store = fixed.store;
+    value = fixed.value;
     return *this;
 }

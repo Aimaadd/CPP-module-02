@@ -2,7 +2,7 @@
 
 class Fixed {
     private :
-        int store;
+        int value;
         static const int frac_bits;
     public :
         Fixed();
